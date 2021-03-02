@@ -15,6 +15,29 @@
             margin: 20px;
             display: inline-block;
         }
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        p, h3, ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li.fav {
+            background: #ff9ed2;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +48,7 @@
         <div v-if="showBooks"> <!--from Vue.createApp-->
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
-                <li v-for="book in books"> <!--book can be renamed as you want, books is from const app-->
+                <li v-for="book in books" :class="{ fav: book.isFav}"> <!--book can be renamed as you want, books is from const app, class fav will be true according to book.isFav value-->
                     <img :src="book.img" :alt="book.title"> <!--: shortcut for v-bind-->
                     <h3>{{ book.title }}</h3> <!--array books-->
                     <p>{{ book.author }}</p> <!--array books-->
