@@ -21,20 +21,22 @@
     <h1>Vue JS</h1>
     <div id="app">
         <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
+        <a :href="url">Youtube</a> <!--v-bind-->
         <div v-if="showBooks"> <!--from Vue.createApp-->
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
-                <li v-for="book in books">
-                    <h3>{{ book.title }}</h3>
-                    <p>{{ book.author }}</p>
+                <li v-for="book in books"> <!--book can be renamed as you want, books is from const app-->
+                    <img :src="book.img" :alt="book.title"> <!--: shortcut for v-bind-->
+                    <h3>{{ book.title }}</h3> <!--array books-->
+                    <p>{{ book.author }}</p> <!--array books-->
                 </li>
             </ul>
         </div>
-        <button v-on:click="age++">Increase age</button>
-        <button v-on:click="age--">Decrease age</button>
+        <!-- <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Decrease age</button> -->
         <!-- <div @click="title = 'More and more'">Click to change book title</div> -->
         <div @click="changeTitle('Twice')">Click to change book title</div> <!--calls the func changeTitle-->
-        <button @click="toggleShowBooks"> <!--methods-->
+        <button @click="toggleShowBooks"> <!--methods // @click is onclick-->
             <span v-if="showBooks">Hide Books</span> <!--from Vue.createApp-->
             <span v-else>Show Books</span> <!--from Vue.createApp-->
         </button>
