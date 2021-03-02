@@ -6,11 +6,21 @@ const app = Vue.createApp({
     data() {
         return {
             showBooks: true,
-            title: 'The Final Empire',
-            author: 'Brandon Sanderson',
-            age: 45,
-            x: 0,
-            y: 0,
+            // title: 'The Final Empire',
+            // author: 'Brandon Sanderson',
+            // age: 45,
+            // x: 0,
+            // y: 0,
+            books: [{
+                title: "name of the wind",
+                author: "patrick rothfuss"
+            }, {
+                title: "the way of the kings",
+                author: "Brandon Sanderson"
+            }, {
+                title: "The Final Empire",
+                author: "Brandon Sanderson"
+            },]
         } // can only be accessed inside the div with id app
     },
 
