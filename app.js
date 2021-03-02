@@ -5,6 +5,7 @@ const app = Vue.createApp({
     // template: '<h2>I am the template</h2>'
     data() {
         return {
+            showBooks: true,
             title: 'The Final Empire',
             author: 'Brandon Sanderson',
             age: 45
@@ -16,6 +17,10 @@ const app = Vue.createApp({
             // console.log("you clicked me")
             // this.title = 'More and more' // title will be changed to this.title
             this.title = title // value is from parameter
+        },
+
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks
         }
     }
 })
