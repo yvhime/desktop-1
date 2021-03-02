@@ -9,18 +9,22 @@ const app = Vue.createApp({
             // title: 'The Final Empire',
             // author: 'Brandon Sanderson',
             // age: 45,
-            // x: 0,
-            // y: 0,
+            x: 0,
+            y: 0,
             books: [{
                 title: "name of the wind",
-                author: "patrick rothfuss"
+                author: "patrick rothfuss",
+                img: "assets/Ember_Spirit_icon.png"
             }, {
                 title: "the way of the kings",
-                author: "Brandon Sanderson"
+                author: "Brandon Sanderson",
+                img: "assets/Faceless_Void_icon.png"
             }, {
                 title: "The Final Empire",
-                author: "Brandon Sanderson"
-            },]
+                author: "Brandon Sanderson",
+                img: "assets/Naga_Siren_icon.png"
+            },],
+            url: "www.youtube.com"
         } // can only be accessed inside the div with id app
     },
 
