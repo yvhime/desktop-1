@@ -14,15 +14,18 @@ const app = Vue.createApp({
             books: [{
                 title: "name of the wind",
                 author: "patrick rothfuss",
-                img: "assets/Ember_Spirit_icon.png"
+                img: "assets/Ember_Spirit_icon.png",
+                isFav: true
             }, {
                 title: "the way of the kings",
                 author: "Brandon Sanderson",
-                img: "assets/Faceless_Void_icon.png"
+                img: "assets/Faceless_Void_icon.png",
+                isFav: false
             }, {
                 title: "The Final Empire",
                 author: "Brandon Sanderson",
-                img: "assets/Naga_Siren_icon.png"
+                img: "assets/Naga_Siren_icon.png",
+                isFav: true
             },],
             url: "www.youtube.com"
         } // can only be accessed inside the div with id app
