@@ -8,7 +8,9 @@ const app = Vue.createApp({
             showBooks: true,
             title: 'The Final Empire',
             author: 'Brandon Sanderson',
-            age: 45
+            age: 45,
+            x: 0,
+            y: 0,
         } // can only be accessed inside the div with id app
     },
 
@@ -21,6 +23,18 @@ const app = Vue.createApp({
 
         toggleShowBooks() {
             this.showBooks = !this.showBooks
+        },
+
+        handleEvent(e, data) { // two params from @mouseover
+            console.log(e, e.type)
+            if(data) {
+                console.log(data); // will be logged if data has value
+            }
+        },
+
+        handleMouseMove(e) {
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     }
 })
