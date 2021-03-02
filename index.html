@@ -48,7 +48,11 @@
         <div v-if="showBooks"> <!--from Vue.createApp-->
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
-                <li v-for="book in books" :class="{ fav: book.isFav}"> <!--book can be renamed as you want, books is from const app, class fav will be true according to book.isFav value-->
+                <li v-for="book in books" :class="{ fav: book.isFav}" @click="toggleFav(book)">
+                <!--book can be renamed as you want, books is from const app, 
+                    class fav will be true according to book.isFav value,
+                    toggleFav(book) is from book in books-->
+                <!-- <li v-for="book in filteredBooks" :class="{ fav: book.isFav}" @click="toggleFav(book)"> -->
                     <img :src="book.img" :alt="book.title"> <!--: shortcut for v-bind-->
                     <h3>{{ book.title }}</h3> <!--array books-->
                     <p>{{ book.author }}</p> <!--array books-->
