@@ -52,6 +52,18 @@ const app = Vue.createApp({
         handleMouseMove(e) {
             this.x = e.offsetX
             this.y = e.offsetY
+        },
+
+        toggleFav(book) { // param from :class="{ fav: book.isFav}"
+            book.isFav = !book.isFav // if book is true for example it will reverse it to false using !
+                                     // and assign it to book.isFav
+        }
+    },
+
+    computed: {
+        filteredBooks() {
+            return this.books.filter((book) => book.isFav) // to filter book if true it will be shown
+                                                           // else it will be deleted
         }
     }
 })
