@@ -22,3 +22,13 @@ function spikeRush() {
 }
 
 spikeRush();
+
+const scores = [50, 25, 0, 30, 100, 20, 10];
+for(let i = 0; i < scores.length; i++) {
+    console.log("score list " + scores[i]);
+    if(scores[i] === 100) {
+        console.log("you got the top score of 100" + scores[i]);
+        break;
+    }
+}
+// C:\Users\billy\AppData\Local\GitHubDesktop
