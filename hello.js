@@ -32,3 +32,19 @@ for(let i = 0; i < scores.length; i++) {
     }
 }
 // C:\Users\billy\AppData\Local\GitHubDesktop
+
+//function declaration
+function greet() {
+    console.log("hello there");
+}
+
+greet();
+
+//function expression
+const speak = function(game = "dota2", mode = "ranked") { // values on parameters are default if no argument passed
+    console.log("my game is " + game + mode);
+}
+
+speak();
+speak("valorant", "competitive");
+
