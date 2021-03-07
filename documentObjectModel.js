@@ -42,3 +42,9 @@ const people = ["nayeon", "momo", "jihyo"];
 people.forEach(function(person) {
     content.innerHTML += "bias" + person;
 });
+
+// =========================================================
+const link = document.querySelector("a"); // a tag from index3.html
+console.log(link.getAttribute("href")); // .getAttribute is a method // parameter href is the value to be retrieved
+const changeLink = link.setAttribute("href", "https://www.w3schools.com");
+link.innerText = "w3";
