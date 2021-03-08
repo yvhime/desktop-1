@@ -27,11 +27,11 @@ console.log(para1.innerText); // gets the inner text of the element
 para1.innerText = "ninjas are awesome"; // replaces the first p of index3.html
 
 // =========================================================
-// const para2 = document.querySelectorAll("p"); // gets all the p tag
-// para2.forEach(function(paraValue) { // loops all the p tag / paraValue is the param
-//     console.log("query selector all p " + paraValue.innerText); // shows it to the console
-//     paraValue.innerText += " new text"; // appends this value to all p tag
-// });
+const para2 = document.querySelectorAll("p"); // gets all the p tag
+para2.forEach(function(paraValue) { // loops all the p tag / paraValue is the param
+    console.log("query selector all p " + paraValue.innerText); // shows it to the console // only shows the text value
+    paraValue.innerText += " new text"; // appends this value to all p tag
+});
 
 // =========================================================
 const content = document.querySelector(".content");
@@ -40,7 +40,7 @@ content.innerHTML += "<h2>THE NEW CONTENT</h2>";
 
 const people = ["nayeon", "momo", "jihyo"];
 people.forEach(function(person) {
-    content.innerHTML += "bias" + person;
+    content.innerHTML += "bias" + person + "<br>"; // .innerHTML includes the html attributes
 });
 
 // =========================================================

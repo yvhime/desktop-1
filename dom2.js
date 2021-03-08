@@ -1,7 +1,7 @@
-// const content = document.querySelector("p");
-// console.log(content.classList); // classList is a property // gets a list of all the different classes
-// content.classList.add("error"); // .add is a method to add something to classList in this case
-// content.classList.add("success"); // .add is a method to add something to classList in this case
+const content = document.querySelector("p");
+console.log(content.classList); // classList is a property // gets a list of all the different classes
+content.classList.add("allami"); // .add is a method to add something to content.classList in this case
+content.classList.add("ullyeodae"); // .add is a method to add something to content.classList in this case
 
 const paras = document.querySelectorAll("p");
 paras.forEach(function(p) {
